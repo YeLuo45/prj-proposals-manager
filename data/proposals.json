@@ -4,11 +4,11 @@
     {
       "id": "card-game-prototype",
       "name": "card-game-prototype",
-      "description": "P-20260522-027",
+      "description": "Direction A 迭代9：market-overlay category下拉；filterMarketPlugins()异步Promise处理；分类+标签+搜索三重过滤；V74→V75",
       "url": "",
       "gitRepo": "",
-      "createdAt": "2026-05-22",
-      "updatedAt": "2026-05-22",
+      "createdAt": "2026-05-21",
+      "updatedAt": "2026-05-24",
       "proposals": [
         {
           "id": "P-20260521-004",
@@ -22,16 +22,16 @@
           "tags": [
             "提案"
           ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
+          "createdAt": "2026-05-21",
+          "updatedAt": "2026-05-21",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "feat: 插件系统 v2 (V69) — ruflo Hook架构 + nanobot Registry模式; Git commit a0d6e26; push via GitHub REST API; remote SHA 2ad5a393"
+          "acceptance": "accepted"
         },
         {
-          "id": "P-20260522-003",
+          "id": "P-20260524-016",
           "name": "card-game-prototype",
-          "description": "P-20260522-003",
+          "description": "P-20260524-016",
           "type": "package",
           "status": "archived",
           "url": "",
@@ -40,16 +40,16 @@
           "tags": [
             "提案"
           ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260522-025",
+          "id": "P-20260524-045",
           "name": "card-game-prototype",
-          "description": "P-20260522-025",
+          "description": "P-20260524-045",
           "type": "package",
           "status": "archived",
           "url": "",
@@ -58,16 +58,16 @@
           "tags": [
             "提案"
           ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
         },
         {
-          "id": "P-20260522-027",
+          "id": "P-20260524-048",
           "name": "card-game-prototype",
-          "description": "P-20260522-027",
+          "description": "P-20260524-048",
           "type": "package",
           "status": "archived",
           "url": "",
@@ -76,690 +76,77 @@
           "tags": [
             "提案"
           ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "price-compare",
-      "name": "price-compare",
-      "description": "P-20260522-033",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-22",
-      "updatedAt": "2026-05-22",
-      "proposals": [
+        },
         {
-          "id": "P-20260521-002",
-          "name": "price-compare",
-          "description": "P-20260521-002",
+          "id": "P-20260524-061",
+          "name": "card-game-prototype",
+          "description": "Direction A 迭代7：RemoteMarket.fetchManifest() 优先尝试manifestUrl，失败则fallback到ai-superpower /api/proposals；_fetchFromApi() 将提案映射为插件格式；PluginCache TTL 5分钟；V72→V73",
           "type": "package",
           "status": "archived",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/price-compare/archive/refs/heads/main.zip",
+          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
             "提案"
           ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "Vue3+Vite多端比价，mock数据，监控列表，历史价格走势"
+          "acceptance": "accepted"
         },
         {
-          "id": "P-20260522-005",
-          "name": "price-compare",
-          "description": "P-20260522-005",
+          "id": "P-20260524-065",
+          "name": "card-game-prototype",
+          "description": "Direction A 迭代8：installMarketPlugin() 异步fetch + 真实下载插件JS；new Function()执行远程插件代码；PluginCache TTL 5分钟；V73→V74",
           "type": "package",
           "status": "archived",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/price-compare/archive/refs/heads/main.zip",
+          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
             "提案"
           ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "无人值守模式 Round1 完成。feat commit 00355f4，构建成功(7.30s)，数据层强化 + ECharts + IndexedDB。"
+          "acceptance": "accepted"
         },
         {
-          "id": "P-20260522-030",
-          "name": "price-compare",
-          "description": "P-20260522-030",
+          "id": "P-20260524-078",
+          "name": "card-game-prototype",
+          "description": "Direction A 迭代9：market-overlay category下拉；filterMarketPlugins()异步Promise处理；分类+标签+搜索三重过滤；V74→V75",
           "type": "package",
           "status": "archived",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/price-compare/archive/refs/heads/main.zip",
+          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
             "提案"
           ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-032",
-          "name": "price-compare",
-          "description": "P-20260522-032",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/price-compare/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-033",
-          "name": "price-compare",
-          "description": "P-20260522-033",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/price-compare/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "pixel-pal-web",
-      "name": "pixel-pal-web",
-      "description": "P-20260522-034",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-22",
-      "updatedAt": "2026-05-22",
-      "proposals": [
-        {
-          "id": "P-20260521-005",
-          "name": "pixel-pal-web",
-          "description": "P-20260521-005",
-          "type": "web",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "Direction A无人值守模式交付；sync-to-index命令(commit 6586ae5/push 5eff835)；proposal-index.md 6819→2140行，237提案13项目"
-        },
-        {
-          "id": "P-20260522-001",
-          "name": "pixel-pal-web",
-          "description": "P-20260522-001",
-          "type": "web",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-002",
-          "name": "pixel-pal-web",
-          "description": "P-20260522-002",
-          "type": "web",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-004",
-          "name": "pixel-pal-web",
-          "description": "P-20260522-004",
-          "type": "web",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-012",
-          "name": "proposals",
-          "description": "P-20260522-012",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/proposals/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-023",
-          "name": "pixel-pal-web",
-          "description": "P-20260522-023",
-          "type": "web",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-034",
-          "name": "pixel-pal-web",
-          "description": "P-20260522-034",
-          "type": "web",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "doc-editor",
-      "name": "doc-editor",
-      "description": "P-20260522-021",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-22",
-      "updatedAt": "2026-05-22",
-      "proposals": [
-        {
-          "id": "P-20260522-006",
-          "name": "doc-editor",
-          "description": "P-20260522-006",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-007",
-          "name": "doc-editor",
-          "description": "P-20260522-007",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-008",
-          "name": "doc-editor",
-          "description": "P-20260522-008",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-009",
-          "name": "doc-editor",
-          "description": "P-20260522-009",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-010",
-          "name": "doc-editor",
-          "description": "P-20260522-010",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-013",
-          "name": "doc-editor",
-          "description": "P-20260522-013",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-014",
-          "name": "doc-editor",
-          "description": "P-20260522-014",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-015",
-          "name": "doc-editor",
-          "description": "P-20260522-015",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-016",
-          "name": "doc-editor",
-          "description": "P-20260522-016",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-017",
-          "name": "doc-editor",
-          "description": "P-20260522-017",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-018",
-          "name": "doc-editor",
-          "description": "P-20260522-018",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-019",
-          "name": "doc-editor",
-          "description": "P-20260522-019",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-020",
-          "name": "doc-editor",
-          "description": "P-20260522-020",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-021",
-          "name": "doc-editor",
-          "description": "P-20260522-021",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/doc-editor/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "prj-proposals-manager",
-      "name": "prj-proposals-manager",
-      "description": "P-20260522-031",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-22",
-      "updatedAt": "2026-05-22",
-      "proposals": [
-        {
-          "id": "P-20260522-022",
-          "name": "prj-proposals-manager",
-          "description": "P-20260522-022",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/prj-proposals-manager/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-024",
-          "name": "prj-proposals-manager",
-          "description": "P-20260522-024",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/prj-proposals-manager/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-026",
-          "name": "prj-proposals-manager",
-          "description": "P-20260522-026",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/prj-proposals-manager/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-031",
-          "name": "prj-proposals-manager",
-          "description": "P-20260522-031",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/prj-proposals-manager/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "github-repo-manager",
-      "name": "github-repo-manager",
-      "description": "P-20260522-039",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "2026-05-22",
-      "updatedAt": "2026-05-22",
-      "proposals": [
-        {
-          "id": "P-20260522-038",
-          "name": "github-repo-manager",
-          "description": "P-20260522-038",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/github-repo-manager/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "accepted"
-        },
-        {
-          "id": "P-20260522-039",
-          "name": "github-repo-manager",
-          "description": "P-20260522-039",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/github-repo-manager/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "pending"
         }
       ]
     },
     {
       "id": "cultivation-simulator",
       "name": "cultivation-simulator",
-      "description": "P-20260522-037",
+      "description": "P-20260521-003",
       "url": "",
       "gitRepo": "",
-      "createdAt": "accepted",
-      "updatedAt": "accepted",
+      "createdAt": "2026-05-22",
+      "updatedAt": "2026-05-22",
       "proposals": [
-        {
-          "id": "P-20260522-036",
-          "name": "cultivation-simulator",
-          "description": "P-20260522-036",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "accepted",
-          "updatedAt": "accepted",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260521-003",
-          "name": "cultivation-simulator",
-          "description": "P-20260521-003",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "2026-05-22",
-          "updatedAt": "2026-05-22",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "无人值守模式交付；参考ruflo/nanobot设计文档实现插件市场系统"
-        },
         {
           "id": "P-20260521-006",
           "name": "cultivation-simulator",
@@ -815,13 +202,31 @@
           "acceptance": "accepted"
         },
         {
+          "id": "P-20260522-036",
+          "name": "cultivation-simulator",
+          "description": "P-20260522-036",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-22",
+          "updatedAt": "2026-05-22",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
           "id": "P-20260522-037",
-          "name": "p-20260522-037",
+          "name": "cultivation-simulator",
           "description": "P-20260522-037",
           "type": "package",
           "status": "archived",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/p-20260522-037/archive/refs/heads/main.zip",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
             "提案"
@@ -831,181 +236,15 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
-        }
-      ]
-    },
-    {
-      "id": "ai-subscription",
-      "name": "ai-subscription",
-      "description": "P-20260522-045",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "pending",
-      "updatedAt": "pending",
-      "proposals": [
-        {
-          "id": "P-20260522-042",
-          "name": "ai-subscription",
-          "description": "P-20260522-042",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "pending",
-          "updatedAt": "pending",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "timeout-approved"
         },
         {
-          "id": "P-20260522-044",
-          "name": "ai-subscription",
-          "description": "P-20260522-044",
+          "id": "P-20260522-056",
+          "name": "cultivation-simulator",
+          "description": "P-20260522-056",
           "type": "package",
           "status": "archived",
           "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "pending",
-          "updatedAt": "pending",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "timeout-approved"
-        },
-        {
-          "id": "P-20260522-046",
-          "name": "ai-subscription",
-          "description": "P-20260522-046",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "pending",
-          "updatedAt": "pending",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "timeout-approved"
-        },
-        {
-          "id": "P-20260522-041",
-          "name": "ai-subscription",
-          "description": "P-20260522-041",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "accepted",
-          "updatedAt": "accepted",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "timeout-approved"
-        },
-        {
-          "id": "P-20260522-043",
-          "name": "ai-subscription",
-          "description": "P-20260522-043",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "accepted",
-          "updatedAt": "accepted",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "timeout-approved"
-        },
-        {
-          "id": "P-20260522-045",
-          "name": "ai-subscription",
-          "description": "P-20260522-045",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/ai-subscription/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "accepted",
-          "updatedAt": "accepted",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": "timeout-approved"
-        }
-      ]
-    },
-    {
-      "id": "creative-drawing-board",
-      "name": "creative-drawing-board",
-      "description": "P-20260522-035",
-      "url": "",
-      "gitRepo": "",
-      "createdAt": "timeout-approved",
-      "updatedAt": "timeout-approved",
-      "proposals": [
-        {
-          "id": "P-20260522-001",
-          "name": "creative-drawing-board",
-          "description": "P-20260522-001",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "timeout-approved",
-          "updatedAt": "timeout-approved",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260522-045",
-          "name": "creative-drawing-board",
-          "description": "P-20260522-045",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
-          "gitRepo": "",
-          "tags": [
-            "提案"
-          ],
-          "createdAt": "timeout-approved",
-          "updatedAt": "timeout-approved",
-          "prdConfirmation": "",
-          "techExpectations": "",
-          "acceptance": ""
-        },
-        {
-          "id": "P-20260522-035",
-          "name": "creative-drawing-board",
-          "description": "P-20260522-035",
-          "type": "package",
-          "status": "archived",
-          "url": "",
-          "packageUrl": "https://github.com/YeLuo45/creative-drawing-board/archive/refs/heads/main.zip",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
           "gitRepo": "",
           "tags": [
             "提案"
@@ -1015,6 +254,24 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260521-003",
+          "name": "cultivation-simulator",
+          "description": "P-20260521-003",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-21",
+          "updatedAt": "2026-05-21",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "node --check passed, git commit 9bda0a6"
         }
       ]
     }
