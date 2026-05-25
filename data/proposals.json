@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "projects": [
     {
       "id": "card-game-prototype",
@@ -172,8 +172,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "cultivation-simulator",
@@ -418,8 +417,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "ai-superpower-dev",
@@ -484,8 +482,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     },
     {
       "id": "ai-novel-assistant",
@@ -568,8 +565,7 @@
           "techExpectations": "",
           "acceptance": "accepted"
         }
-      ],
-      "milestones": []
+      ]
     }
   ]
 }
