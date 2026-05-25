@@ -4,11 +4,11 @@
     {
       "id": "card-game-prototype",
       "name": "card-game-prototype",
-      "description": "Direction A 迭代9：market-overlay category下拉；filterMarketPlugins()异步Promise处理；分类+标签+搜索三重过滤；V74→V75",
+      "description": "Direction A 迭代12：checkPluginUpdates()版本检测；updateMarketPlugin()热更新；插件管理UI显示🔔角标+更新按钮；更新日志面板；V77→V78",
       "url": "",
       "gitRepo": "",
       "createdAt": "2026-05-21",
-      "updatedAt": "2026-05-24",
+      "updatedAt": "2026-05-27",
       "proposals": [
         {
           "id": "P-20260521-004",
@@ -83,6 +83,24 @@
           "acceptance": "accepted"
         },
         {
+          "id": "P-20260527-001",
+          "name": "card-game-prototype",
+          "description": "P-20260527-001",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-27",
+          "updatedAt": "2026-05-27",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
           "id": "P-20260524-061",
           "name": "card-game-prototype",
           "description": "Direction A 迭代7：RemoteMarket.fetchManifest() 优先尝试manifestUrl，失败则fallback到ai-superpower /api/proposals；_fetchFromApi() 将提案映射为插件格式；PluginCache TTL 5分钟；V72→V73",
@@ -135,17 +153,35 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260524-079",
+          "name": "card-game-prototype",
+          "description": "Direction A 迭代12：checkPluginUpdates()版本检测；updateMarketPlugin()热更新；插件管理UI显示🔔角标+更新按钮；更新日志面板；V77→V78",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/card-game-prototype/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
         }
       ]
     },
     {
       "id": "cultivation-simulator",
       "name": "cultivation-simulator",
-      "description": "P-20260521-003",
+      "description": "P-20260524-093",
       "url": "",
       "gitRepo": "",
       "createdAt": "2026-05-22",
-      "updatedAt": "2026-05-22",
+      "updatedAt": "2026-05-26",
       "proposals": [
         {
           "id": "P-20260521-006",
@@ -272,6 +308,262 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "node --check passed, git commit 9bda0a6"
+        },
+        {
+          "id": "P-20260526-001",
+          "name": "cultivation-simulator",
+          "description": "P-20260526-001",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-26",
+          "updatedAt": "2026-05-26",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260524-080",
+          "name": "cultivation-simulator",
+          "description": "P-20260524-080",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260524-081",
+          "name": "cultivation-simulator",
+          "description": "P-20260524-081",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260524-083",
+          "name": "cultivation-simulator",
+          "description": "P-20260524-083",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260524-084",
+          "name": "cultivation-simulator",
+          "description": "P-20260524-084",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260524-093",
+          "name": "cultivation-simulator",
+          "description": "P-20260524-093",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        }
+      ]
+    },
+    {
+      "id": "ai-superpower-dev",
+      "name": "ai-superpower-dev",
+      "description": "Direction B: sync.py (CSV→JSON转换+GitHub API push) + test_sync_to_prj.py (13个测试) + GlobalSyncStatusResponse + POST /api/sync/push + GET /api/sync/status; 核心模块覆盖率88%",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-24",
+      "updatedAt": "2026-05-25",
+      "proposals": [
+        {
+          "id": "P-20260524-006",
+          "name": "ai-superpower-dev",
+          "description": "Direction A: Stats API (/api/stats) + SyncStatus API (/api/projects/{id}/sync-status + /sync-enabled) + _web_ctx() + auto-backup trigger; test_storage: 78 passed; test_api: 39 passed",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-superpower-dev/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260525-002",
+          "name": "ai-superpower-dev",
+          "description": "Direction A: settings.html sync配置区块 + dashboard Sync Status卡片 + GET/POST /api/sync/config + POST /api/sync/export + app.js loadSyncConfig/saveSyncConfig/loadSyncStatus/triggerSyncExport/toggleSyncEnabled",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-superpower-dev/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-25",
+          "updatedAt": "2026-05-25",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260525-003",
+          "name": "ai-superpower-dev",
+          "description": "Direction B: sync.py (CSV→JSON转换+GitHub API push) + test_sync_to_prj.py (13个测试) + GlobalSyncStatusResponse + POST /api/sync/push + GET /api/sync/status; 核心模块覆盖率88%",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-superpower-dev/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-25",
+          "updatedAt": "2026-05-25",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        }
+      ]
+    },
+    {
+      "id": "ai-novel-assistant",
+      "name": "ai-novel-assistant",
+      "description": "Direction C：MCP外部工具桥（MCPClient核心connect/disconnect/listTools/callTool + MCPServerAdapter让ai-novel-assistant作为MCP Server对外提供工具 + localTools本地工具queryMaterials/generateCharacter/suggestPlot + MCToolsPanel工具面板UI）；1776行新增；nanobot-design参考；build成功；master+gh-pages push成功",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-24",
+      "updatedAt": "2026-05-24",
+      "proposals": [
+        {
+          "id": "P-20260524-065",
+          "name": "ai-novel-assistant",
+          "description": "Direction B：17个Lifecycle Hook类型扩展 + PluginRegistry插件注册表 + 5个内置插件(errorHandler/alert/telemetry/block/learning) + SkillLibrary插件Tab UI + HookAuditor审计日志 + Dexie v48 schema扩展(plugins/learning_records/hook_audit表)；ruflo-design参考；build 11.17s；master+gh-pages push成功",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260524-067",
+          "name": "ai-novel-assistant",
+          "description": "Direction D：五层记忆 L0-L4 完整实现（SensoryMemory + WorkingMemory + EpisodicMemory + SemanticMemory知识图谱 + ProceduralMemory技能自动化 + ForgettingEngine遗忘巩固 + MemoryOrchestrator协同）；2358行新增；generic-agent-design参考；master+gh-pages push成功",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260524-072",
+          "name": "ai-novel-assistant",
+          "description": "Direction E：循环叙事引擎 DAG+Tarjan SCC（Kahn算法验证DAG + 环路检测 + 最小割破环 + Tarjan SCC强连通分量 + CircularNarrativeEngine addNode/connect/registerForeshadow/registerCallback/validate + NarrativeConsistencyChecker伏笔/回环/断头路检查）；1984行新增；chatdev-design参考；build成功；master push待网络恢复",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260524-073",
+          "name": "ai-novel-assistant",
+          "description": "Direction C：MCP外部工具桥（MCPClient核心connect/disconnect/listTools/callTool + MCPServerAdapter让ai-novel-assistant作为MCP Server对外提供工具 + localTools本地工具queryMaterials/generateCharacter/suggestPlot + MCToolsPanel工具面板UI）；1776行新增；nanobot-design参考；build成功；master+gh-pages push成功",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-novel-assistant/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-24",
+          "updatedAt": "2026-05-24",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
         }
       ]
     }
