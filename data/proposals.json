@@ -422,11 +422,11 @@
     {
       "id": "ai-superpower-dev",
       "name": "ai-superpower-dev",
-      "description": "Direction B: sync.py (CSV→JSON转换+GitHub API push) + test_sync_to_prj.py (13个测试) + GlobalSyncStatusResponse + POST /api/sync/push + GET /api/sync/status; 核心模块覆盖率88%",
+      "description": "Direction A：项目本地路径自动填充(project_local_path字段+根据project_name自动查找local_path)、重复项目检测(POST /api/projects新增force参数+GET /api/projects/check-duplicate端点)、提案合并(POST /api/proposals/merge-by-project)、时间戳(create_at/update_at字段+sort_by支持)；新增4个测试文件共28个测试全部通过",
       "url": "",
       "gitRepo": "",
       "createdAt": "2026-05-24",
-      "updatedAt": "2026-05-25",
+      "updatedAt": "2026-05-26",
       "proposals": [
         {
           "id": "P-20260524-006",
@@ -478,6 +478,24 @@
           ],
           "createdAt": "2026-05-25",
           "updatedAt": "2026-05-25",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260526-004",
+          "name": "ai-superpower-dev",
+          "description": "Direction A：项目本地路径自动填充(project_local_path字段+根据project_name自动查找local_path)、重复项目检测(POST /api/projects新增force参数+GET /api/projects/check-duplicate端点)、提案合并(POST /api/proposals/merge-by-project)、时间戳(create_at/update_at字段+sort_by支持)；新增4个测试文件共28个测试全部通过",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-superpower-dev/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-26",
+          "updatedAt": "2026-05-26",
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
