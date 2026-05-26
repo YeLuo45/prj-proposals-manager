@@ -422,7 +422,7 @@
     {
       "id": "ai-superpower-dev",
       "name": "ai-superpower-dev",
-      "description": "Direction A：项目本地路径自动填充(project_local_path字段+根据project_name自动查找local_path)、重复项目检测(POST /api/projects新增force参数+GET /api/projects/check-duplicate端点)、提案合并(POST /api/proposals/merge-by-project)、时间戳(create_at/update_at字段+sort_by支持)；新增4个测试文件共28个测试全部通过",
+      "description": "Direction A：Proposals表格增加Created/Updated列+sort_by支持；Projects表单增加Check Duplicate按钮；Proposals工具栏增加Merge按钮+模态框；GitHub Pages部署改为完整Web UI（web-ui.html作为SPA模板）；deploy.yml更新确保部署Web UI而非README",
       "url": "",
       "gitRepo": "",
       "createdAt": "2026-05-24",
@@ -493,6 +493,24 @@
           "gitRepo": "",
           "tags": [
             "提案"
+          ],
+          "createdAt": "2026-05-26",
+          "updatedAt": "2026-05-26",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260526-011",
+          "name": "ai-superpower-dev",
+          "description": "Direction A：Proposals表格增加Created/Updated列+sort_by支持；Projects表单增加Check Duplicate按钮；Proposals工具栏增加Merge按钮+模态框；GitHub Pages部署改为完整Web UI（web-ui.html作为SPA模板）；deploy.yml更新确保部署Web UI而非README",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/ai-superpower-dev/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "Web"
           ],
           "createdAt": "2026-05-26",
           "updatedAt": "2026-05-26",
