@@ -177,7 +177,7 @@
     {
       "id": "cultivation-simulator",
       "name": "cultivation-simulator",
-      "description": "P-20260529-022",
+      "description": "P-20260529-034",
       "url": "",
       "gitRepo": "",
       "createdAt": "2026-05-22",
@@ -1843,6 +1843,222 @@
           "id": "P-20260529-022",
           "name": "cultivation-simulator",
           "description": "P-20260529-022",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-023",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-023",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-024",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-024",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-025",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-025",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-026",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-026",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-027",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-027",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-028",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-028",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-029",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-029",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-030",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-030",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-031",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-031",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-032",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-032",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-033",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-033",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-29",
+          "updatedAt": "2026-05-29",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260529-034",
+          "name": "cultivation-simulator",
+          "description": "P-20260529-034",
           "type": "package",
           "status": "archived",
           "url": "",
