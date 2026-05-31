@@ -177,11 +177,11 @@
     {
       "id": "cultivation-simulator",
       "name": "cultivation-simulator",
-      "description": "P-20260530-019",
+      "description": "P-20260531-025",
       "url": "",
       "gitRepo": "",
       "createdAt": "2026-05-22",
-      "updatedAt": "2026-05-30",
+      "updatedAt": "2026-05-31",
       "proposals": [
         {
           "id": "P-20260521-006",
@@ -2558,6 +2558,24 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260531-025",
+          "name": "cultivation-simulator",
+          "description": "P-20260531-025",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/cultivation-simulator/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-31",
+          "updatedAt": "2026-05-31",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
         }
       ]
     },
@@ -2742,6 +2760,35 @@
           "prdConfirmation": "",
           "techExpectations": "",
           "acceptance": "accepted"
+        }
+      ]
+    },
+    {
+      "id": "pixel-pal-web",
+      "name": "pixel-pal-web",
+      "description": "P-20260531-001",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-05-31",
+      "updatedAt": "2026-05-31",
+      "proposals": [
+        {
+          "id": "P-20260531-001",
+          "name": "pixel-pal-web",
+          "description": "P-20260531-001",
+          "type": "web",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-31",
+          "updatedAt": "2026-05-31",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "PRD → Tech Solution → Test Cases → dev委托 → 验收"
         }
       ]
     }
