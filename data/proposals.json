@@ -2766,7 +2766,7 @@
     {
       "id": "pixel-pal-web",
       "name": "pixel-pal-web",
-      "description": "P-20260531-001",
+      "description": "P-20260531-026",
       "url": "",
       "gitRepo": "",
       "createdAt": "2026-05-31",
@@ -2788,7 +2788,25 @@
           "updatedAt": "2026-05-31",
           "prdConfirmation": "",
           "techExpectations": "",
-          "acceptance": "PRD → Tech Solution → Test Cases → dev委托 → 验收"
+          "acceptance": "All 3 iterations complete + merged to master + deployed"
+        },
+        {
+          "id": "P-20260531-026",
+          "name": "pixel-pal-web",
+          "description": "P-20260531-026",
+          "type": "web",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/pixel-pal-web/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-05-31",
+          "updatedAt": "2026-05-31",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
         }
       ]
     }
