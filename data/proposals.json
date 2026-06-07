@@ -2809,6 +2809,125 @@
           "acceptance": "accepted"
         }
       ]
+    },
+    {
+      "id": "hermes-agent",
+      "name": "hermes-agent",
+      "description": "Bundle 而非 mirror (8/200 skills, 60KB/35MB); body 100% verbatim; metadata.upstream + body `> **Origin**` 双层 attribution; hermes skills browse --source official 自动识别",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-06-07",
+      "updatedAt": "2026-06-07",
+      "proposals": [
+        {
+          "id": "P-20260607-001",
+          "name": "hermes-agent",
+          "description": "P-20260607-001",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/hermes-agent/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-06-07",
+          "updatedAt": "2026-06-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "pending"
+        },
+        {
+          "id": "P-20260607-002",
+          "name": "hermes-agent",
+          "description": "headroom-ai 未装时引擎降级 passthrough (不 crash agent); CCR 模式可暴露 `headroom_retrieve` 工具拉回被压缩的原始消息",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/hermes-agent/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-06-07",
+          "updatedAt": "2026-06-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260607-003",
+          "name": "hermes-agent",
+          "description": "Scrapling 未装时 is_available()=False, 自动从 picker 隐藏; 单 URL 失败用 per-URL error 隔离, 不污染 batch; StealthyFetcher 需 Playwright + Chromium 下载 (~150MB)",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/hermes-agent/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-06-07",
+          "updatedAt": "2026-06-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260607-004",
+          "name": "hermes-agent",
+          "description": "不破坏 read_file 现有 binary block; 复用 website_policy 守门; URL/本地路径自动判定; file:// 和 data: URI 允许无 netloc",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/hermes-agent/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-06-07",
+          "updatedAt": "2026-06-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260607-005",
+          "name": "hermes-agent",
+          "description": "env-key + URL region 必须匹配 (国际 Key + .cn URL = 401); publish 工具需要在 AiToEarn 平台先绑定社交账号; 缺 key 时 graceful degradation (agent 仍启动, aitoearn 探活失败)",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/hermes-agent/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-06-07",
+          "updatedAt": "2026-06-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        },
+        {
+          "id": "P-20260607-006",
+          "name": "hermes-agent",
+          "description": "Bundle 而非 mirror (8/200 skills, 60KB/35MB); body 100% verbatim; metadata.upstream + body `> **Origin**` 双层 attribution; hermes skills browse --source official 自动识别",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/hermes-agent/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-06-07",
+          "updatedAt": "2026-06-07",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        }
+      ]
     }
   ]
 }
