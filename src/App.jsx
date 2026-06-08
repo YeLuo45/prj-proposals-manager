@@ -7,7 +7,7 @@ import ProposalCard from './components/ProposalCard';
 import ProposalForm from './components/ProposalForm';
 import ProjectCard from './components/ProjectCard';
 import ProjectForm from './components/ProjectForm';
-import { useGitHub } from './hooks/useGitHub';
+import { useMcp } from './hooks/useMcp';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 
 const ITEMS_PER_PAGE = 12;
@@ -23,133 +23,101 @@ function HomePage() {
   const [editingProposal, setEditingProposal] = useState(null);
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [editingProject, setEditingProject] = useState(null);
-  const [showTokenInput, setShowTokenInput] = useState(false);
-  const [token, setToken] = useState('');
+  const [showSettings, setShowSettings] = useState(false);
 
   const navigate = useNavigate();
-  const { fetchData, saveData, loading, error } = useGitHub();
+  const {
+    loadData, addProject, updateProject, deleteProject,
+    addProposal, updateProposal, deleteProposal,
+    loading, error, apiKey,
+  } = useMcp();
 
   useEffect(() => {
-    const savedToken = localStorage.getItem('github_token');
-    if (savedToken) {
-      setToken(savedToken);
-      loadData();
+    if (apiKey) {
+      loadData().then(setData).catch((err) => console.error('Failed to load data:', err));
     } else {
-      setShowTokenInput(true);
+      setShowSettings(true);
     }
-  }, []);
-
-  const loadData = async () => {
-    try {
-      const loadedData = await fetchData();
-      setData(loadedData);
-    } catch (err) {
-      console.error('Failed to load data:', err);
-    }
-  };
-
-  const handleSaveToken = (newToken) => {
-    localStorage.setItem('github_token', newToken);
-    setToken(newToken);
-    setShowTokenInput(false);
-    loadData();
-  };
+  }, [apiKey, loadData]);
 
   const handleSelectProject = (projectId) => {
     navigate(`/project/${encodeURIComponent(projectId)}`);
   };
 
   const handleAddProject = async (newProject) => {
-    const today = new Date().toISOString().split('T')[0];
-    const existingToday = data.projects.filter(p => p.id.startsWith(`PRJ-${today.replace(/-/g, '')}`));
-    const seqNum = String(existingToday.length + 1).padStart(3, '0');
-    const id = `PRJ-${today.replace(/-/g, '')}-${seqNum}`;
-
-    const project = {
-      ...newProject,
-      id,
-      createdAt: today,
-      updatedAt: today,
-      milestones: []
-    };
-
-    const newData = {
-      ...data,
-      projects: [...data.projects, project]
-    };
-    await saveData(newData);
-    setData(newData);
-    setShowProjectForm(false);
+    try {
+      const created = await addProject(newProject);
+      // Reload to get the canonical server-side project (with id, timestamps)
+      const fresh = await loadData();
+      setData(fresh);
+      setShowProjectForm(false);
+      return created;
+    } catch (err) {
+      console.error('Failed to add project:', err);
+      throw err;
+    }
   };
 
   const handleEditProject = async (updatedProject) => {
-    const today = new Date().toISOString().split('T')[0];
-    const newData = {
-      ...data,
-      projects: data.projects.map(p =>
-        p.id === updatedProject.id ? { ...updatedProject, updatedAt: today } : p
-      )
-    };
-    await saveData(newData);
-    setData(newData);
-    setEditingProject(null);
-    setShowProjectForm(false);
+    try {
+      await updateProject(updatedProject.id, updatedProject);
+      const fresh = await loadData();
+      setData(fresh);
+      setEditingProject(null);
+      setShowProjectForm(false);
+    } catch (err) {
+      console.error('Failed to update project:', err);
+      throw err;
+    }
   };
 
   const handleDeleteProject = async (id) => {
     if (!confirm('确定要删除这个项目吗？')) return;
-    const newData = {
-      ...data,
-      projects: data.projects.filter(p => p.id !== id)
-    };
-    await saveData(newData);
-    setData(newData);
+    try {
+      await deleteProject(id);
+      const fresh = await loadData();
+      setData(fresh);
+    } catch (err) {
+      console.error('Failed to delete project:', err);
+      alert(`删除失败: ${err.message || err}`);
+    }
   };
 
   const handleAddProposal = async (newProposal) => {
-    const today = new Date().toISOString().split('T')[0];
-    const existingToday = data.proposals.filter(p => p.id.startsWith(`P-${today.replace(/-/g, '')}`));
-    const seqNum = String(existingToday.length + 1).padStart(3, '0');
-    const id = `P-${today.replace(/-/g, '')}-${seqNum}`;
-
-    const proposal = {
-      ...newProposal,
-      id,
-      createdAt: today,
-      updatedAt: today,
-    };
-
-    const newData = {
-      ...data,
-      proposals: [...data.proposals, proposal]
-    };
-    await saveData(newData);
-    setData(newData);
-    setShowForm(false);
+    try {
+      await addProposal(newProposal);
+      const fresh = await loadData();
+      setData(fresh);
+      setShowForm(false);
+    } catch (err) {
+      console.error('Failed to add proposal:', err);
+      throw err;
+    }
   };
 
   const handleEditProposal = async (updatedProposal) => {
-    const today = new Date().toISOString().split('T')[0];
-    const newData = {
-      ...data,
-      proposals: data.proposals.map(p =>
-        p.id === updatedProposal.id ? { ...updatedProposal, updatedAt: today } : p
-      )
-    };
-    await saveData(newData);
-    setData(newData);
-    setEditingProposal(null);
-    setShowForm(false);
+    try {
+      await updateProposal(updatedProposal.id, updatedProposal);
+      const fresh = await loadData();
+      setData(fresh);
+      setEditingProposal(null);
+      setShowForm(false);
+    } catch (err) {
+      console.error('Failed to update proposal:', err);
+      throw err;
+    }
   };
 
   const handleDeleteProposal = async (id) => {
     if (!confirm('确定要删除这个提案吗？')) return;
-    const newData = {
-      ...data,
-      proposals: data.proposals.filter(p => p.id !== id)
-    };
-    await saveData(newData);
-    setData(newData);
+    try {
+      await deleteProposal(id);
+      const fresh = await loadData();
+      setData(fresh);
+    } catch (err) {
+      console.error('Failed to delete proposal:', err);
+      alert(`删除失败: ${err.message || err}`);
+    }
   };
 
   const handleCopyUrl = (url) => {
@@ -177,30 +145,8 @@ function HomePage() {
     setCurrentPage(1);
   }, [searchQuery]);
 
-  if (showTokenInput) {
-    return (
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <div className="bg-white p-8 rounded-lg shadow-md w-96">
-          <h1 className="text-2xl font-bold mb-4">设置 GitHub Token</h1>
-          <p className="text-gray-600 mb-4">
-            请输入 GitHub Personal Access Token 以访问和修改提案数据。
-          </p>
-          <input
-            type="password"
-            value={token}
-            onChange={(e) => setToken(e.target.value)}
-            placeholder="输入 GitHub Token"
-            className="w-full px-4 py-2 border rounded-lg mb-4"
-          />
-          <button
-            onClick={() => handleSaveToken(token)}
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
-          >
-            保存 Token
-          </button>
-        </div>
-      </div>
-    );
+  if (showSettings) {
+    return <SettingsScreen onClose={() => setShowSettings(false)} />;
   }
 
   return (
@@ -210,7 +156,7 @@ function HomePage() {
           setEditingProposal(null);
           setShowForm(true);
         }}
-        onSettings={() => setShowTokenInput(true)}
+        onSettings={() => setShowSettings(true)}
         onAddProject={() => {
           setEditingProject(null);
           setShowProjectForm(true);
@@ -361,6 +307,114 @@ function HomePage() {
           }}
         />
       )}
+    </div>
+  );
+}
+
+function SettingsScreen({ onClose }) {
+  const { serverUrl, setServerUrl, apiKey, setApiKey, testConnection, loading, error } = useMcp();
+  const [testResult, setTestResult] = useState(null);
+  const [testErr, setTestErr] = useState(null);
+
+  const handleTest = async () => {
+    setTestResult(null);
+    setTestErr(null);
+    try {
+      const r = await testConnection();
+      setTestResult(r);
+    } catch (e) {
+      setTestErr(e && e.message ? e.message : String(e));
+    }
+  };
+
+  const handleSaveAndClose = () => {
+    onClose();
+    // Force a reload to pick up the new apiKey / serverUrl
+    window.location.reload();
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h1 className="text-2xl font-bold mb-2">设置 — ai-superpower MCP</h1>
+        <p className="text-gray-600 mb-6 text-sm">
+          数据通过 MCP 协议直连 ai-superpower (HTTP Streamable)。<br />
+          启动 ai-superpower 后填入 server URL 和 X-API-Key 即可。
+        </p>
+
+        <label className="block mb-1 font-semibold text-gray-700">MCP Server URL</label>
+        <input
+          type="text"
+          value={serverUrl}
+          onChange={(e) => setServerUrl(e.target.value)}
+          placeholder="http://127.0.0.1:8000"
+          className="w-full px-4 py-2 border rounded-lg mb-4 font-mono text-sm"
+        />
+        <p className="text-xs text-gray-500 mb-4 -mt-3">
+          ai-superpower run 的地址（path /mcp 会自动追加）
+        </p>
+
+        <label className="block mb-1 font-semibold text-gray-700">X-API-Key</label>
+        <input
+          type="password"
+          value={apiKey}
+          onChange={(e) => setApiKey(e.target.value)}
+          placeholder="32 字符 hex"
+          className="w-full px-4 py-2 border rounded-lg mb-4 font-mono text-sm"
+        />
+        <p className="text-xs text-gray-500 mb-4 -mt-3">
+          与 ~/.ai-superpower/config.toml 的 [api].key 一致
+        </p>
+
+        <div className="flex gap-2 mb-4">
+          <button
+            onClick={handleTest}
+            disabled={loading}
+            className="flex-1 bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600 disabled:opacity-50"
+          >
+            {loading ? '测试中...' : '测试连接'}
+          </button>
+          <button
+            onClick={handleSaveAndClose}
+            className="flex-1 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
+          >
+            保存并继续
+          </button>
+        </div>
+
+        {error && <div className="text-red-500 text-sm mb-2">错误: {error}</div>}
+
+        {testErr && (
+          <div className="text-red-500 text-sm bg-red-50 p-3 rounded mb-2">
+            <strong>连接失败:</strong> {testErr}
+          </div>
+        )}
+
+        {testResult && (
+          <div className="text-green-700 text-sm bg-green-50 p-3 rounded">
+            <strong>✓ 连接成功</strong><br />
+            工具数: {testResult.toolCount}<br />
+            {testResult.serverInfo && (
+              <>Server: {testResult.serverInfo.name} v{testResult.serverInfo.version}<br /></>
+            )}
+            <details className="mt-2">
+              <summary className="cursor-pointer">工具列表</summary>
+              <pre className="text-xs mt-1 whitespace-pre-wrap">
+                {testResult.tools.join(', ')}
+              </pre>
+            </details>
+          </div>
+        )}
+
+        {apiKey && onClose && (
+          <button
+            onClick={onClose}
+            className="w-full text-gray-500 text-sm py-2 mt-2 hover:text-gray-700"
+          >
+            取消
+          </button>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGitHub } from '../hooks/useGitHub';
+import { useMcp } from '../hooks/useMcp';
 import MilestoneTimeline from '../components/MilestoneTimeline';
 import MilestoneForm from '../components/MilestoneForm';
 import ProposalCard from '../components/ProposalCard';
@@ -13,77 +13,61 @@ export default function ProjectDetailPage({ projectId }) {
   const [editingMilestone, setEditingMilestone] = useState(null);
 
   const navigate = useNavigate();
-  const { fetchData, saveData } = useGitHub();
+  const { loadData, updateProject } = useMcp();
 
-  const loadData = useCallback(async () => {
+  const reload = useCallback(async () => {
     try {
-      const loadedData = await fetchData();
+      const loadedData = await loadData();
       setData(loadedData);
       setLoading(false);
     } catch (err) {
-      setError(err.message);
+      setError(err.message || String(err));
       setLoading(false);
     }
-  }, [fetchData]);
+  }, [loadData]);
 
   useEffect(() => {
-    loadData();
-  }, [loadData]);
+    reload();
+  }, [reload]);
 
   const project = data.projects.find(p => p.id === projectId);
   const projectProposals = data.proposals.filter(p => p.projectId === projectId);
 
   const handleSaveMilestone = async (milestoneData) => {
     if (!project) return;
+    const newMilestones = editingMilestone
+      ? project.milestones.map(m =>
+          m.id === editingMilestone.id ? { ...milestoneData, id: editingMilestone.id, updatedAt: Date.now() } : m
+        )
+      : [
+          ...(project.milestones || []),
+          { ...milestoneData, id: `MS-${Date.now()}`, createdAt: Date.now(), updatedAt: Date.now() },
+        ];
 
-    const today = new Date().toISOString().split('T')[0];
-    let newMilestones;
-
-    if (editingMilestone) {
-      // 编辑
-      newMilestones = project.milestones.map(m =>
-        m.id === editingMilestone.id ? { ...milestoneData, id: editingMilestone.id, updatedAt: Date.now() } : m
-      );
-    } else {
-      // 新建
-      const id = `MS-${Date.now()}`;
-      newMilestones = [...(project.milestones || []), {
-        ...milestoneData,
-        id,
-        createdAt: Date.now(),
-        updatedAt: Date.now()
-      }];
+    try {
+      await updateProject(projectId, { milestones: newMilestones });
+      await reload();
+      setShowMilestoneForm(false);
+      setEditingMilestone(null);
+    } catch (err) {
+      console.error('Failed to save milestone:', err);
+      alert(`保存失败: ${err.message || err}`);
     }
-
-    const newData = {
-      ...data,
-      projects: data.projects.map(p =>
-        p.id === projectId ? { ...p, milestones: newMilestones, updatedAt: today } : p
-      )
-    };
-
-    await saveData(newData);
-    setData(newData);
-    setShowMilestoneForm(false);
-    setEditingMilestone(null);
   };
 
   const handleDeleteMilestone = async (milestoneId) => {
     if (!confirm('确定要删除这个里程碑吗？')) return;
-
-    const newData = {
-      ...data,
-      projects: data.projects.map(p =>
-        p.id === projectId
-          ? { ...p, milestones: p.milestones.filter(m => m.id !== milestoneId) }
-          : p
-      )
-    };
-
-    await saveData(newData);
-    setData(newData);
-    setShowMilestoneForm(false);
-    setEditingMilestone(null);
+    if (!project) return;
+    const newMilestones = project.milestones.filter(m => m.id !== milestoneId);
+    try {
+      await updateProject(projectId, { milestones: newMilestones });
+      await reload();
+      setShowMilestoneForm(false);
+      setEditingMilestone(null);
+    } catch (err) {
+      console.error('Failed to delete milestone:', err);
+      alert(`删除失败: ${err.message || err}`);
+    }
   };
 
   const handleEditMilestone = (milestone) => {
