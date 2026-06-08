@@ -31,9 +31,8 @@
 
 ### 技术功能
 - 🔍 **实时搜索**：300ms防抖，搜索名称、描述和标签
-- 📦 **上传包文件**：上传文件到 GitHub Release Assets
 - 📋 **一键复制链接**：复制 URL 或包下载链接到剪贴板
-- 💾 **GitHub API 同步**：数据持久化到 GitHub
+- 🔌 **ai-superpower MCP**：数据通过 MCP 协议直连 ai-superpower（替代 GitHub API，2026-06-08 Phase 2 完成）
 
 ## 目录结构
 ```
@@ -53,91 +52,72 @@ proposals-manager/
 │   │   └── pages/
 │   │       └── ProjectDetailPage.jsx  # 项目详情页
 │   ├── hooks/
-│   │   └── useGitHub.js        # GitHub API 操作钩子
-│   ├── App.jsx                 # 主应用组件（含路由）
+│   │   └── useMcp.js           # ai-superpower MCP 客户端钩子（替换旧 useGitHub.js）
+│   ├── __tests__/
+│   │   └── useMcp.test.js      # 14 vitest tests @ 100% mock coverage
+│   ├── App.jsx                 # 主应用组件（含路由 + SettingsScreen）
 │   ├── index.css               # 全局样式
 │   └── main.jsx                # 入口文件
-├── data/
-│   └── proposals.json           # 提案数据存储（v3格式）
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml          # GitHub Pages 部署
 ├── index.html
 ├── package.json
-├── vite.config.js
+├── vite.config.js              # dev /mcp 代理
+├── vitest.config.js
 └── tailwind.config.js
 ```
 
-## 数据结构（v3）
-```json
-{
-  "version": 3,
-  "projects": [
-    {
-      "id": "PRJ-YYYYMMDD-XXX",
-      "name": "项目名称",
-      "description": "项目描述",
-      "createdAt": "YYYY-MM-DD",
-      "updatedAt": "YYYY-MM-DD",
-      "milestones": [
-        {
-          "id": "MS-XXX",
-          "name": "里程碑名称",
-          "description": "里程碑描述",
-          "targetDate": "YYYY-MM-DD",
-          "status": "pending|in_progress|completed",
-          "proposalIds": ["P-YYYYMMDD-XXX"],
-          "createdAt": "timestamp",
-          "updatedAt": "timestamp"
-        }
-      ]
-    }
-  ],
-  "proposals": [
-    {
-      "id": "P-YYYYMMDD-XXX",
-      "name": "提案名称",
-      "projectId": "PRJ-XXX",
-      "description": "提案描述",
-      "type": "web | app | package",
-      "status": "active | in_dev | archived",
-      "url": "https://...",
-      "packageUrl": "https://...",
-      "tags": ["标签1", "标签2"],
-      "createdAt": "YYYY-MM-DD",
-      "updatedAt": "YYYY-MM-DD"
-    }
-  ]
-}
+## 数据结构（v3）— 现在由 ai-superpower 管理
+数据存储在 **ai-superpower**（`~/.ai-superpower/proposals.csv` + `projects.csv`），通过 MCP 协议暴露。SPA 不再直接管理本地 JSON 文件。如需查看原始数据结构，请参考 ai-superpower 的 [`models.py`](https://github.com/YeLuo45/ai-superpower) 或运行：
+
+```bash
+aisp project list
+aisp proposal list
 ```
 
 ## 本地运行
 ```bash
 # 安装依赖
-npm install
+NODE_ENV=development npm install
 
-# 安装 React Router
-npm install react-router-dom@6
+# 启动 ai-superpower server（MCP 数据源）
+cd ../ai-superpower
+aisp run --port 8000
+# 确认 /mcp 端点可用：curl http://127.0.0.1:8000/mcp/
 
-# 开发模式运行
-npm run dev
+# 启动 prj-proposals-manager（开发模式，会通过 vite proxy 转发 /mcp → 8000）
+cd ../prj-proposals-manager
+NODE_ENV=development npm run dev
+# 打开 http://localhost:5173
+
+# 首次打开会弹出 Settings 界面，填入：
+#   MCP Server URL: http://127.0.0.1:8000
+#   X-API-Key: <~/.ai-superpower/config.toml 的 [api].key>
+# 点击"测试连接"会列出 ai-superpower 的 20 个工具
 
 # 构建生产版本
-npm run build
+NODE_ENV=development npm run build
 
-# 预览生产版本
-npm run preview
+# 跑测试
+NODE_ENV=development npx vitest run
 ```
 
 ## 配置说明
 
-### 设置 GitHub PAT
-1. 首次使用时会提示输入 GitHub Personal Access Token
-2. Token 存储在浏览器 localStorage 中
-3. Token 需要以下权限：
-   - `repo` (完整仓库访问) - 用于读写 proposals.json
+### 设置 ai-superpower MCP
+1. 首次使用时会弹出 Settings 界面（或点击顶栏"设置"）
+2. 填入：
+   - **MCP Server URL** — ai-superpower 运行的地址（默认 `http://127.0.0.1:8000`）
+   - **X-API-Key** — 与 `~/.ai-superpower/config.toml` 的 `[api].key` 一致
+3. 点击"测试连接"验证（应显示 20 个工具 + serverInfo）
+4. 配置存于浏览器 localStorage（key: `mcp_server_url` + `mcp_api_key`）
+
+### dev 模式 CORS
+`vite.config.js` 把 `/mcp` 代理到 `http://127.0.0.1:8000/mcp/`，避免浏览器 CORS。生产部署同源或反代。
 
 ## 部署说明
 - 部署方式：GitHub Actions 自动部署到 GitHub Pages
 - 触发条件：push 到 main 分支
-- 构建产物：dist/ 目录（含 data/proposals.json）
+- 构建产物：dist/ 目录（不包含 data/proposals.json — 数据从 ai-superpower MCP 实时拉取）
+- 生产环境需保证 `https://<site>/mcp` 可访问 ai-superpower（同源部署或反代）
