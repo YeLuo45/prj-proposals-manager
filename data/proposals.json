@@ -2928,6 +2928,35 @@
           "acceptance": "accepted"
         }
       ]
+    },
+    {
+      "id": "prj-proposals-manager",
+      "name": "prj-proposals-manager",
+      "description": "P-20260608-005",
+      "url": "",
+      "gitRepo": "",
+      "createdAt": "2026-06-08",
+      "updatedAt": "2026-06-08",
+      "proposals": [
+        {
+          "id": "P-20260608-005",
+          "name": "prj-proposals-manager",
+          "description": "P-20260608-005",
+          "type": "package",
+          "status": "archived",
+          "url": "",
+          "packageUrl": "https://github.com/YeLuo45/prj-proposals-manager/archive/refs/heads/main.zip",
+          "gitRepo": "",
+          "tags": [
+            "提案"
+          ],
+          "createdAt": "2026-06-08",
+          "updatedAt": "2026-06-08",
+          "prdConfirmation": "",
+          "techExpectations": "",
+          "acceptance": "accepted"
+        }
+      ]
     }
   ]
 }
